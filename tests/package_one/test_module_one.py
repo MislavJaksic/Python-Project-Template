@@ -1,7 +1,7 @@
-import sys
+from tests import context
+
 import pytest
 
-from tests import context
 from big_package.package_one import module_one
 
 

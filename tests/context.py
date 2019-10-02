@@ -1,5 +1,5 @@
-import sys
 import os
+import sys
 
 # Adds "src" to sys.path
 # "src" contains a package "big_package"
