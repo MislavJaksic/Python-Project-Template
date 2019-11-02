@@ -1,5 +1,14 @@
 ## Python Project Template
 
+```
+# Note: Install Python 3
+
+$: python -m pip install -U pip  # update pip, a package manager
+
+$: pip install --user pipenv  # install pipenv, a dependency manager
+# Note: you may need to add pipenv to PATH
+```
+
 ### docs
 
 ```
