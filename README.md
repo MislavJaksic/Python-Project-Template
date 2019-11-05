@@ -7,6 +7,8 @@ $: python -m pip install -U pip  # update pip, a package manager
 
 $: pip install --user pipenv  # install pipenv, a dependency manager
 # Note: you may need to add pipenv to PATH
+
+$: pipenv install  # install all dependencies
 ```
 
 ### docs
@@ -19,11 +21,6 @@ $: make html
 ```
 
 ### src
-
-```
-$: pipenv --python Python-Version
-$: pipenv install
-```
 
 ```
 $: pipenv run python ./src/big_package/runner.py
@@ -43,9 +40,12 @@ $: pipenv run pytest --cov=src --cov-report=html tests
 
 ### Pipfile/Pipfile.lock
 
-Dependencies and the virtual environment are managed by pipenv.
+Dependencies, Python version and the virtual environment are managed by pipenv.
 
 ```
+$: pipenv --python Python-Version  # lock project's Python version
+
+$: pip search Package-Name
 $: pipenv install Package-Name==Package-Version
 ```
 
