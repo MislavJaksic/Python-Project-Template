@@ -1,7 +1,7 @@
 """
     Application module.
 """
-from big_package.package_two import module_two
+from poetry_template.package_two import module_two
 
 
 def add(x, y):

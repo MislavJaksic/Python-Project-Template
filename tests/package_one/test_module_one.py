@@ -2,7 +2,7 @@ from tests import context
 
 import pytest
 
-from big_package.package_one import module_one
+from poetry_template.package_one import module_one
 
 
 class TestClassForModuleOne(object):

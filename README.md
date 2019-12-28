@@ -1,70 +1,86 @@
 ## Python Project Template
-
 ```
 # Note: Install Python 3
 
-$: python -m pip install -U pip  # update pip, a package manager
+# Note: install Poetry for Linux
+$: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 
-$: pip install --user pipenv  # install pipenv, a dependency manager
-# Note: you may need to add pipenv to PATH
+# Note: install Poetry for Windows
+$: (Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -UseBasicParsing).Content | python
 
-$: pipenv install  # install all dependencies
+$: python get-poetry.py --uninstall
+```
+
+```
+$: poetry install  # install all dependencies
+```
+
+### dist
+
+```
+$: pip install dist/poetry_template-x.y.z-py3-none.any.whl
+
+$: poetry-template
 ```
 
 ### docs
 
 ```
-$: pipenv shell
+$: poetry shell
 $: cd docs
 # Note: review source/conf.py and source/index.rst
 $: make html
+# Note: see docs in docs/build/apidocs/index.html
 ```
 
-### src
+### poetry_template
 
 ```
-$: pipenv run python ./src/big_package/runner.py
-$: pipenv run
+$: poetry run python ./poetry_template/runner.py
 ```
 
 ### tests
 
 ```
-$: pipenv run pytest
+$: poetry run pytest
 ```
 
 ```
-$: pipenv run pytest --cov=src --cov-report=html tests
-#: Note: the coverage report is htmlcov/index.html
+$: poetry run pytest --cov=poetry_template --cov-report=html tests
+#: Note: see coverage report in htmlcov/index.html
 ```
 
-### Pipfile/Pipfile.lock
+### poetry.lock
 
-Dependencies, Python version and the virtual environment are managed by pipenv.
+Dependencies, Python version and the virtual environment are managed by `Poetry`.
 
 ```
-$: pipenv --python Python-Version  # lock project's Python version
-
-$: pip search Package-Name
-$: pipenv install Package-Name==Package-Version
+$: poetry search Package-Name
+$: poetry add Package-Name[==Package-Version]
 ```
+
+### pyproject.toml
+
+Define project entry point and metadata.  
 
 ### setup.cfg
 
-Configure Python libraries.
-
-### setup.py
-
-Define project entry point and metadata.
+Configure Python libraries.  
 
 ### Linters
 
 ```
-$: pipenv run flake8  # check PEP8
+$: poetry run black .
 ```
 
-### Enter venv
+### Publish
 
 ```
-$: pipenv shell
+$: poetry config pypi-token.pypi PyPI-API-Access-Token
+
+$: poetry publish --build
+```
+
+```
+https://pypi.org/project/poetry-template/
 ```
