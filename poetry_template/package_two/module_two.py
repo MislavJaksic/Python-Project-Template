@@ -4,12 +4,10 @@
 
 
 def add_two_numbers(x, y):
-    """Add two numbers.
-    """
+    """Add two numbers."""
     return x + y
 
 
 def multiply_two_numbers(x, y):
-    """Multiply two numbers.
-    """
+    """Multiply two numbers."""
     return x * y

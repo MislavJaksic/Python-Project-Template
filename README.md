@@ -7,18 +7,20 @@ $: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-p
 
 # Note: install Poetry for Windows
 $: (Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -UseBasicParsing).Content | python
+# Note: do NOT update Poetry, it will break itself
 
 $: python get-poetry.py --uninstall
 ```
 
 ```
+# Note: `.toml` project name and package have no match (poetry-template; poetry_template)
 $: poetry install  # install all dependencies
 ```
 
 ### dist
 
 ```
-$: pip install dist/poetry_template-x.y.z-py3-none.any.whl
+$: pip install dist/poetry_template-1.2.3-py3-none.any.whl
 
 $: poetry-template
 ```
@@ -42,7 +44,7 @@ $: poetry run python ./poetry_template/runner.py
 ### tests
 
 ```
-$: poetry run pytest
+$: poetry run pytest --durations=0
 ```
 
 ```
