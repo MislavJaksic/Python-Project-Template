@@ -1,6 +1,22 @@
 ## Python Project Template
+
+```
+After creating a new git repository copy over:
+* docs
+* poetry_template
+* tests
+* pyproject.toml
+* README.md
+* setup.cfg
+
+Go through the project and change the placeholder values. pyproject.toml contains the list of the most important values present throughout the project.
+
+Finally, delete this note.
+```
+
 ```
 # Note: Install Python 3
+# Update pip and install virtualenv (dependency encapsulator) and black (linter; IDE needs to be restarted)
 
 # Note: install Poetry for Linux
 $: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
@@ -13,7 +29,7 @@ $: python get-poetry.py --uninstall
 ```
 
 ```
-# Note: `.toml` project name and package have no match (poetry-template; poetry_template)
+# Note: `.toml` project name and package have to match (poetry-template; poetry_template)
 $: poetry install  # install all dependencies
 ```
 
