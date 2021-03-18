@@ -19,7 +19,8 @@ Finally, delete this note.
 # Update pip and install virtualenv (dependency encapsulator) and black (linter; IDE needs to be restarted)
 
 # Note: install Poetry for Linux
-$: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+# Note: it doesn't matter if you pass it to `python` or `python3`
+$: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 
 # Note: install Poetry for Windows
 $: (Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -UseBasicParsing).Content | python
