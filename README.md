@@ -36,7 +36,7 @@ $: poetry install  # install all dependencies
 ### dist
 
 ```
-$: pip install dist/poetry_template-1.2.3-py3-none.any.whl
+$: pip install dist/poetry_template-0.1.3-py3-none.any.whl
 
 $: poetry-template
 ```
@@ -91,11 +91,19 @@ Configure Python libraries.
 $: poetry run black .
 ```
 
-### Publish
+### cProfile
 
 ```
-$: poetry config pypi-token.pypi PyPI-API-Access-Token
+$: poetry run python ./poetry_template/profiler.py
+```
 
+### Build and publish
+
+```
+$: poetry build
+
+# Note: get the token from your PiPy account
+$: poetry config pypi-token.pypi PyPI-Api-Access-Token
 $: poetry publish --build
 ```
 
