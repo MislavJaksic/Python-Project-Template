@@ -13,7 +13,7 @@ from loguru import logger
 
 from poetry_template.package_one import module_one
 
-log_message = "who={username}, what={object}/{status}, where={system}/{application}/{component}/{source}, when={timestamp}/{timezone}, why={reason}, who={action}"
+log_message = "who={username}, what={object}/{status}, where={system}/{application}/{component}/{source}, when={timestamp}/{timezone}, why={reason}, how={action}"
 
 
 def main(args):

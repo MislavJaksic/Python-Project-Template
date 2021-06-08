@@ -34,6 +34,8 @@ $: python get-poetry.py --uninstall
 $: poetry install  # install all dependencies
 ```
 
+More info about [poetry](https://github.com/MislavJaksic/Knowledge-Repository/tree/master/Technology/Software/BuildTool/poetry).   
+
 ### dist
 
 ```
