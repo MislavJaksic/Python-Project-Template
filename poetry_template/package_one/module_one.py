@@ -24,7 +24,7 @@ def raise_exception():
     raise SystemExit(1)
 
 
-class Calculator(object):
+class Calculator:
     class_field = "class_value"
 
     def __init__(self, instance_value):

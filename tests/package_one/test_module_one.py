@@ -9,7 +9,7 @@ def test_get_setting():
     assert module_one.get_setting() == "text.txt"
 
 
-class TestClassForModuleOne(object):
+class TestClassForModuleOne:
     def test_add(self):
         assert module_one.add(1, 5) == 6
 
@@ -55,7 +55,7 @@ def calculator():
     # teardown
 
 
-class TestCalculator(object):
+class TestCalculator:
     # def __init__(self): # Forbidden by pytest! Use fixtures instead
     #     self.calculator = module_one.Calculator("instance_value")
 

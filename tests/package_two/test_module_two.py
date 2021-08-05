@@ -3,7 +3,7 @@ from tests import context
 from poetry_template.package_two import module_two
 
 
-class TestClassForModuleTwo(object):
+class TestClassForModuleTwo:
     def test_add_two_numbers(self):
         assert module_two.add_two_numbers(1, 5) == 6
 
