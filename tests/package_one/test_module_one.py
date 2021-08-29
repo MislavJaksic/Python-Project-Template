@@ -1,13 +1,30 @@
+from poetry_template.package_one.module_one import add
 from tests import context
 
 import pytest
 
 from poetry_template.package_one import module_one
 
+@pytest.fixture(scope="function")
+def basic_array():
+    # setup
+    yield [x for x in range(5)]
+    # teardown
+
+
+@pytest.fixture(scope="module")
+def complex_array():
+    yield [x for x in range(5)]
 
 def test_get_setting():
     assert module_one.get_setting() == "text.txt"
 
+@pytest.fixture(scope="function")
+def calculator():
+    # setup
+    calculator = module_one.Calculator("instance_value")
+    yield calculator
+    # teardown
 
 class TestClassForModuleOne:
     def test_add(self):
@@ -31,28 +48,14 @@ def test_temporary_directory_file(tmp_path):
     assert dir_file.read_text() == "world, hello"
 
 
-@pytest.fixture(scope="function")
-def basic_array():
-    # setup
-    yield [x for x in range(5)]
-    # teardown
 
-
-@pytest.fixture(scope="module")
-def complex_array():
-    yield [x for x in range(5)]
 
 
 def test_manipulate_array(basic_array):
     assert len(basic_array) == 5
 
 
-@pytest.fixture(scope="function")
-def calculator():
-    # setup
-    calculator = module_one.Calculator("instance_value")
-    yield calculator
-    # teardown
+
 
 
 class TestCalculator:
@@ -61,3 +64,10 @@ class TestCalculator:
 
     def test_multiply(self, calculator):
         assert calculator.multiply(1, 2) == 2
+
+
+
+class TestAddMock:
+    def test_add_mock(self, mock_add):
+        result = add(1, 1)
+        assert result == 10
