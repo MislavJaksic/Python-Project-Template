@@ -15,7 +15,6 @@ import sys
 
 sys.path.insert(0, os.path.abspath("../../poetry_template"))
 
-
 # -- Project information -----------------------------------------------------
 
 project = "poetry-template"
@@ -24,7 +23,6 @@ author = "Mislav Jaksic"
 
 # The full version, including alpha/beta/rc tags
 release = "0.1.3"
-
 
 # -- General configuration ---------------------------------------------------
 
@@ -40,7 +38,6 @@ templates_path = ["_templates"]
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
-
 
 # -- Options for HTML output -------------------------------------------------
 

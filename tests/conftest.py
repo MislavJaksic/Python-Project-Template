@@ -2,6 +2,7 @@
 
 import pytest
 
+from poetry_template.package_one import module_one
 from poetry_template.package_two import module_two
 
 
@@ -24,6 +25,20 @@ class MockAdd:  # used for mocking complex objects
 @pytest.fixture
 def mock_add(monkeypatch):
     def mock(*args, **kwargs):
-        return 10
+        return MockAdd().ten()
 
     monkeypatch.setattr(module_two, "add_two_numbers", mock)
+
+
+class MockCalculator:  # used for mocking complex objects
+    @staticmethod
+    def multiply(a, b):
+        return 99
+
+
+@pytest.fixture
+def mock_calculator(monkeypatch):
+    def mock(*args, **kwargs):
+        return MockCalculator()
+
+    monkeypatch.setattr(module_one, "Calculator", mock)

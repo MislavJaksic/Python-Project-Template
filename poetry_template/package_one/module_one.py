@@ -3,8 +3,8 @@
 """
 from typing import ClassVar
 
-from poetry_template.package_two import module_two
 from poetry_template import settings
+from poetry_template.package_two import module_two
 
 
 def get_setting():

@@ -1,9 +1,8 @@
-from poetry_template.package_one.module_one import add
-from tests import context
-
 import pytest
 
 from poetry_template.package_one import module_one
+from poetry_template.package_one.module_one import add
+
 
 @pytest.fixture(scope="function")
 def basic_array():
@@ -16,8 +15,10 @@ def basic_array():
 def complex_array():
     yield [x for x in range(5)]
 
+
 def test_get_setting():
     assert module_one.get_setting() == "text.txt"
+
 
 @pytest.fixture(scope="function")
 def calculator():
@@ -25,6 +26,7 @@ def calculator():
     calculator = module_one.Calculator("instance_value")
     yield calculator
     # teardown
+
 
 class TestClassForModuleOne:
     def test_add(self):
@@ -48,14 +50,8 @@ def test_temporary_directory_file(tmp_path):
     assert dir_file.read_text() == "world, hello"
 
 
-
-
-
 def test_manipulate_array(basic_array):
     assert len(basic_array) == 5
-
-
-
 
 
 class TestCalculator:
@@ -65,6 +61,10 @@ class TestCalculator:
     def test_multiply(self, calculator):
         assert calculator.multiply(1, 2) == 2
 
+
+class TestMockCalculator:
+    def test_multiply_mock(self, mock_calculator, calculator):  # mock_calculator must come before the real Class!
+        assert calculator.multiply(1, 2) == 99
 
 
 class TestAddMock:

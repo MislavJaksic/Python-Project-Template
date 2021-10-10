@@ -271,6 +271,14 @@ pytest = ">=4.6"
 testing = ["fields", "hunter", "process-tests (==2.0.2)", "six", "pytest-xdist", "virtualenv"]
 
 [[package]]
+name = "pytest-integration"
+version = "0.2.2"
+description = "Organizing pytests by integration or not"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
 name = "pytz"
 version = "2020.5"
 description = "World timezone definitions, modern and historical"
@@ -464,7 +472,7 @@ dev = ["pytest (>=4.6.2)", "black (>=19.3b0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "cbe9531415926785bd94061336e57e9b768609cc10999f95933df596c38dd25d"
+content-hash = "61022726b736fefc256bfcf364afff1c1527e5c54d0128d29110e61d7362844b"
 
 [metadata.files]
 alabaster = [
@@ -667,6 +675,10 @@ pytest = [
 pytest-cov = [
     {file = "pytest-cov-2.10.1.tar.gz", hash = "sha256:47bd0ce14056fdd79f93e1713f88fad7bdcc583dcd7783da86ef2f085a0bb88e"},
     {file = "pytest_cov-2.10.1-py2.py3-none-any.whl", hash = "sha256:45ec2d5182f89a81fc3eb29e3d1ed3113b9e9a873bcddb2a71faaab066110191"},
+]
+pytest-integration = [
+    {file = "pytest_integration-0.2.2-py3-none-any.whl", hash = "sha256:560b18c003cf6a3d6672878e826a823ea5f8d1d289dbe97546495040b2f0bd3d"},
+    {file = "pytest_integration-0.2.2.tar.gz", hash = "sha256:7630b2bb1a8d518168bae44d827c20c4f0c1bbc5a1d3e1014dc5624ccadcdbd1"},
 ]
 pytz = [
     {file = "pytz-2020.5-py2.py3-none-any.whl", hash = "sha256:16962c5fb8db4a8f63a26646d8886e9d769b6c511543557bc84e9569fb9a9cb4"},
