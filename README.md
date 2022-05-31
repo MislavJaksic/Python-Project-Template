@@ -34,7 +34,7 @@ $: python get-poetry.py --uninstall
 $: poetry install  # install all dependencies
 ```
 
-More info about [poetry](https://github.com/MislavJaksic/Knowledge-Repository/tree/master/Technology/Software/BuildTool/poetry).   
+More info about [poetry](https://github.com/MislavJaksic/Knowledge-Repository/tree/master/Technology/Software/BuildTool/poetry).
 
 ### dist
 
@@ -57,7 +57,9 @@ $: make html
 ### poetry_template
 
 ```
-$: poetry run python ./poetry_template/runner.py
+$: poetry run python ./poetry_template/runner.py --help
+
+$: poetry run python ./poetry_template/runner.py -x 2 -y -1 -tuple A B C -list D -list E -list F -move rock
 ```
 
 ### tests
@@ -68,7 +70,13 @@ $: poetry run pytest --durations=0
 
 ```
 $: poetry run pytest --cov=poetry_template --cov-report=html tests
-#: Note: see coverage report in htmlcov/index.html
+# Note: see coverage report in htmlcov/index.html
+# Note: exclude directories from coverage report through .coveragerc
+```
+
+```
+# TODO integration tests, pytest-integration
+# TODO poetry run pytest --cov=eve_tools --cov-report=html -m "not integration_test" --integration-cover tests (it does not run integration test, but it also doesn't contribute to coverage)
 ```
 
 ### poetry.lock
@@ -82,11 +90,11 @@ $: poetry add Package-Name[==Package-Version]
 
 ### pyproject.toml
 
-Define project entry point and metadata.  
+Define project entry point and metadata.
 
 ### setup.cfg
 
-Configure Python libraries.  
+Configure Python libraries.
 
 ### Linters
 
