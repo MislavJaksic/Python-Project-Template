@@ -22,7 +22,7 @@ copyright = "2019, Mislav Jaksic"
 author = "Mislav Jaksic"
 
 # The full version, including alpha/beta/rc tags
-release = "0.1.3"
+release = "0.1.4"
 
 # -- General configuration ---------------------------------------------------
 
