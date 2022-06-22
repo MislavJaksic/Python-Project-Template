@@ -13,6 +13,8 @@ Go through the project and change the placeholder values. pyproject.toml contain
 Finally, delete this note.
 ```
 
+## Development
+
 ```
 # Note: Install Python 3
 # Update pip and install virtualenv (dependency encapsulator) and black (linter; IDE needs to be restarted)
@@ -34,7 +36,7 @@ $: poetry install  # install all dependencies
 ### dist
 
 ```
-$: pip install dist/poetry_template-0.1.3-py3-none.any.whl
+$: pip install dist/poetry_template-0.1.5-py3-none.any.whl
 
 $: poetry-template
 ```
