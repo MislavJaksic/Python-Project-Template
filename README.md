@@ -26,6 +26,7 @@ $: curl -sSL https://install.python-poetry.org | python3 -
 $: (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
 
 $: curl -sSL https://install.python-poetry.org | python3 - --uninstall
+$: (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py - --uninstall
 ```
 
 ```
