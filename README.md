@@ -17,16 +17,9 @@ Finally, delete this note.
 
 ```
 # Note: Install Python 3
-# Update pip and install virtualenv (dependency encapsulator) and black (linter; IDE needs to be restarted)
+# You may also need to install or update pip, virtualenv (dependency encapsulator) and black (linter)
 
-# Note: install Poetry for Linux
-$: curl -sSL https://install.python-poetry.org | python3 -
-
-# Note: install Poetry for Windows
-$: (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
-
-$: curl -sSL https://install.python-poetry.org | python3 - --uninstall
-$: (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py - --uninstall
+# Note: install Poetry for your OS
 ```
 
 ```
